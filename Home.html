@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="open.css" />
+  <script>
+    function openUp() {
+      const $opentop = document.querySelector("#opentop");
+      const $top = document.querySelector("#top");
+      const $front = document.querySelector("#front");
+      const $back = document.querySelector("#back");
+      const $letter = document.querySelector("#letter");
+      const $button = document.querySelector("button");
+
+      $opentop.beginElement();
+      $top.style.zIndex = 2;
+
+      $top.classList.add("animate");
+      $front.classList.add("animate");
+      $back.classList.add("animate");
+      $button.classList.add("animate");
+      $letter.classList.add("animate");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="text">
+    <h1>Hey ! Listen this is for you</h1>
+  </div>
+  <div id="envelope">
+    <div id="back">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300" width="300">
+        <polygon points="0,100 300,100 300,300 0,300" style="fill: #4a274a; stroke: none; stroke-width: 0" />
+      </svg>
+    </div>
+    <div id="front">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300" width="300">
+        <polygon points="0,100 150,200 300,100 300,300 0,300" style="fill: #2abad0; stroke: #ffffff; stroke-width: 3" />
+      </svg>
+    </div>
+    <div id="top">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300" width="300">
+        <polygon points="0,100 150,200 300,100" style="fill: #2abad0; stroke: #ffffff; stroke-width: 2">
+          <animate id="opentop" attributeName="points" dur="0.5s" fill="freeze" begin="indefinite"
+            from="0,100 150,200 300,100" to="0,100 150,0 300,100" />
+        </polygon>
+      </svg>
+    </div>
+
+    <div id="letter">
+      <h1>Hi Nurul Afiqah Binti Mohd Nazri<span></span></h1>
+      <p>
+        Happy birthday to the special person in my life!
+        <br>
+        <br>
+        Thank you for being a part of my life, thank you for your hard work, thank you for growing well, thank you for always being the source of my happiness, thank you for always making me laugh, and thank you for everything. I hope that on this special day you are surrounded by happiness, filled with joy, and blessed with love. I will always be here for you. You will never lose my love because you are the best girl. You are amazing and worth a lot on this earth. Please stay healthy and always happy, because I love you more than yesterday and will always love you until tomorrow. may this special day bring you endless joy and tons of precious memory and semoga panjang umur dan sihat selalu. Selalu jadi anak yang baik okie ,i won't give up on us and i will be here every single time if you need me okay ? please be here  with me susah senang sama sama ,your happiness is mine too 
+        <br>
+        you deserve it everything that comes your way! 
+        <br>
+        <br>
+        regards, zulhilmi 
+        <br>
+        <a href="https://flower-blooming.vercel.app/">Click Here for suprise</a>
+      </p>
+    </div>
+    <button onclick="openUp()">Click Here</button>
+  </div>
+</body>
+
+</html>
